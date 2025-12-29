@@ -49,7 +49,7 @@
 
 .proceed-btn {
   position: fixed;
-  bottom: 150px;
+  bottom: 80px;
   right: 20px;
   padding: 1rem 1.6rem;
   border-radius: 30px;
@@ -70,5 +70,6 @@
     right: 20px;
   }
 }
+
 
 
