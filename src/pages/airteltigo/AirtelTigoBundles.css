@@ -1,0 +1,75 @@
+.airteltigo.bundle-page {
+  background: #f6f7fb;
+  padding: 20px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.airteltigo .bundle-container {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.airteltigo .bundle-logo-box {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.airteltigo .bundle-logo {
+  width: 180px;
+  height: auto;
+}
+
+/* AIRTELTIGO TITLE */
+.airteltigo .bundle-title {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #e60000;
+}
+
+.airteltigo .bundle-label {
+  font-weight: 600;
+  margin-top: 10px;
+  display: block;
+  color: #333;
+}
+
+.airteltigo .bundle-select,
+.airteltigo .bundle-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  margin-top: 6px;
+  font-size: 1rem;
+}
+
+.airteltigo .bundle-price {
+  margin-top: 10px;
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+/* AIRTELTIGO BUTTON */
+.airteltigo .bundle-btn {
+  margin-top: 18px;
+  width: 100%;
+  background: #0057b8;
+  color: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.airteltigo .bundle-btn:hover {
+  background: #00449a;
+}

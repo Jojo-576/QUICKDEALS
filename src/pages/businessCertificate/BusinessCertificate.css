@@ -1,0 +1,95 @@
+.business-page {
+  min-height: 100vh;
+  padding: 2rem 1.5rem 6rem;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* HEADER */
+.business-header {
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
+.business-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.business-header p {
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* FORM */
+.business-form {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2563eb;
+}
+
+/* ERROR */
+.error-text {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+}
+
+/* NOTE */
+.business-note {
+  max-width: 720px;
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #92400e;
+}
+
+/* BUTTON */
+.business-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 1rem 1.8rem;
+  border-radius: 30px;
+  border: none;
+  background: #94a3b8;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.business-btn.active {
+  background: #2563eb;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .business-btn {
+    width: calc(100% - 40px);
+    right: 20px;
+  }
+
+  .business-header h1 {
+    font-size: 1.8rem;
+  }
+}
