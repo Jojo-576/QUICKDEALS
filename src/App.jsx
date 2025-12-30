@@ -42,6 +42,7 @@ import Wallet from "./pages/wallet/Wallet";
 // CONTEXT & PROTECTION
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./routes/ProtectedRoute";
+import MtnAfa from "./pages/mtnafa/MtnAfa";
 
 
 
@@ -102,6 +103,7 @@ function App() {
             <Route path="/passport/application" element={<PassportApplication />} />
             <Route path="/birth-certificate" element={<BirthCertificate />} />
             <Route path="/business-certificate" element={<BusinessCertificate />} />
+            <Route path="/packages/mtn-afa" element={<MtnAfa />} />
             
             
 
