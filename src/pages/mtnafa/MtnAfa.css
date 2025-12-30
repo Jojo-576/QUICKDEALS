@@ -1,0 +1,105 @@
+.afa-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f7f8fa;
+  display: flex;
+  justify-content: center;
+}
+
+.afa-card {
+  max-width: 1100px;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 30px;
+}
+
+/* IMAGE */
+.afa-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* CONTENT */
+.afa-category {
+  color: #1e6eff;
+  font-size: 0.9rem;
+}
+
+.afa-title {
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+.afa-price {
+  margin-bottom: 20px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.new-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.afa-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.afa-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+/* ACTIONS */
+.afa-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.afa-qty {
+  width: 60px;
+  padding: 8px;
+  text-align: center;
+}
+
+.afa-buy {
+  background: #1e6eff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.afa-buy:hover {
+  opacity: 0.9;
+}
+
+.afa-footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .afa-card {
+    grid-template-columns: 1fr;
+  }
+}
