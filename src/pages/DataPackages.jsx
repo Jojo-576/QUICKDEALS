@@ -15,7 +15,7 @@ export default function DataPackages() {
     { id: "telecel", name: "Telecel", img: telecelLogo },
     { id: "mtn", name: "MTN", img: mtnLogo },
     { id: "airteltigo", name: "AirtelTigo", img: airtelLogo },
-    { id: "afa", name: "MTN AFA", img: afaLogo },
+    { id: "mtn-afa", name: "MTN AFA", img: afaLogo },
   ];
 
   return (
@@ -46,3 +46,4 @@ export default function DataPackages() {
     </div>
   );
 }
+
