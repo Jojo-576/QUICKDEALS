@@ -65,17 +65,26 @@
 }
 
 /* PROCEED BUTTON */
-.birth-proceed-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 1rem 1.8rem;
+.proceed-btn {
+  position: static; /* 👈 KEY FIX */
+
+  width: 100%;
+  margin: 2.5rem 0 1rem;
+  padding: 1rem;
+
   border-radius: 30px;
   border: none;
   background: #777;
-  color: #fff;
+  color: white;
   font-size: 1rem;
+  font-weight: 600;
 }
+
+.proceed-btn.active {
+  background: #00c853;
+  cursor: pointer;
+}
+
 
 .birth-proceed-btn.active {
   background: #00c853;
