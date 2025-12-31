@@ -1,0 +1,169 @@
+.wallet-page {
+  padding: 40px 20px;
+  background: #f4f6f8;
+  min-height: 100vh;
+}
+
+.wallet-container {
+  display: flex;
+  gap: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* SIDEBAR */
+.wallet-sidebar {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  width: 240px;
+}
+
+.wallet-sidebar h3 {
+  margin-bottom: 16px;
+}
+
+.wallet-btn {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.wallet-btn.active {
+  background: #ffd600;
+  border: none;
+}
+
+/* MAIN */
+.wallet-main {
+  flex: 1;
+}
+
+.wallet-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.wallet-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  min-width: 260px;
+  flex: 1;
+}
+
+.wallet-card p {
+  color: #666;
+}
+
+.wallet-card h2 {
+  margin-top: 8px;
+  font-size: 1.8rem;
+}
+
+/* TOP UP */
+.wallet-topup {
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  max-width: 500px;
+}
+
+.wallet-topup form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.wallet-topup input,
+.wallet-topup select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* 🔥 BLACK BUTTON */
+.topup-submit-btn {
+  margin-top: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+
+  background: #000;
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.topup-submit-btn:hover {
+  background: #111;
+  transform: translateY(-2px);
+}
+
+/* TRANSACTIONS */
+.wallet-transactions {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.wallet-transactions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.transaction-item span {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.empty {
+  color: #888;
+  margin-top: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .wallet-container {
+    flex-direction: column;
+  }
+
+  .wallet-sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .wallet-cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .wallet-card {
+    width: 100%;
+  }
+
+  .transaction-item {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
