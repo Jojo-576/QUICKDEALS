@@ -8,45 +8,40 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="navbar">
-      <div className="nav-inner">
-        <Link to="/" className="logo">
-          QUICK DEALS GHANA
-        </Link>
+    <nav className="navbar">
+      {/* LOGO */}
+      <Link to="/" className="logo">QuickDealsGhana</Link>
 
-        {/* HAMBURGER */}
-        <div
-          className={`hamburger ${menuOpen ? "open" : ""}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        {/* NAV LINKS */}
-        <nav className={`nav-links ${menuOpen ? "show" : ""}`}>
-          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-
-          {!user ? (
-            <>
-              <Link to="/login" onClick={() => setMenuOpen(false)}>Login</Link>
-              <Link to="/register" onClick={() => setMenuOpen(false)}>Register</Link>
-            </>
-          ) : (
-            <>
-              <Link to="/wallet" onClick={() => setMenuOpen(false)}>
-                Wallet (GH₵ {user.balance.toFixed(2)})
-              </Link>
-              <span className="auth-user">Hello, {user.name}</span>
-              <button onClick={logout} className="logout-btn">
-                Logout
-              </button>
-            </>
-          )}
-        </nav>
+      {/* HAMBURGER */}
+      <div
+        className={`hamburger ${menuOpen ? "active" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    </header>
+
+      {/* NAV LINKS */}
+      <div className={`nav-links ${menuOpen ? "show" : ""}`}>
+        <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+
+        {!user ? (
+          <>
+            <Link to="/login" onClick={() => setMenuOpen(false)}>Login</Link>
+            <Link to="/register" onClick={() => setMenuOpen(false)}>Register</Link>
+          </>
+        ) : (
+          <>
+            <Link to="/wallet" onClick={() => setMenuOpen(false)}>
+              Wallet (GH₵ {user.balance.toFixed(2)})
+            </Link>
+            <span className="auth-user">Hello, {user.name}</span>
+            <button onClick={logout} className="logout-btn">Logout</button>
+          </>
+        )}
+      </div>
+    </nav>
   );
 }
 
