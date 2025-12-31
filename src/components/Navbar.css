@@ -1,107 +1,95 @@
-/* SPACE UNDER HEADER */
-.auth-space {
-  height: 100px;
-  background: white;
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: #0f172a;
+  z-index: 1000;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  padding: 0 20px;
+
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding: 0 16px;
-  position: relative;
+  justify-content: space-between;
 }
 
-/* HAMBURGER */
-.menu-icon {
-  display: none;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-/* NAV CONTAINER */
-.auth-bar {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-/* BUTTONS */
-.auth-btn {
-  height: 34px;
-  padding: 0 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 18px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-/* LOGIN */
-.auth-btn.login {
-  border: 1px solid #000;
-  color: #000;
-  background: transparent;
-}
-
-/* REGISTER */
-.auth-btn.register {
-  background: #00c853;
+.logo {
   color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
-/* WALLET */
-.auth-btn.wallet {
-  background: #ffd600;
-  color: #000;
+/* LINKS */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
-/* LOGOUT */
-.auth-btn.logout {
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-user {
+  color: #facc15;
+  font-weight: 600;
+}
+
+.logout-btn {
   background: #ff5252;
   color: #fff;
   border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
   cursor: pointer;
 }
 
-/* USER NAME */
-.auth-user {
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #000;
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
 }
 
-/* MOBILE VIEW */
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .auth-bar {
-    position: absolute;
-    top: 100px;
-    right: 0;
-    width: 100%;
-    background: white;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px;
-    display: none;
-  }
-
-  .auth-bar.open {
+  .hamburger {
     display: flex;
   }
 
-  .auth-bar a,
-  .auth-btn,
-  .auth-user {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
     width: 100%;
-    padding: 10px 0;
-  }
-}
+    background: #0f172a;
 
-/* REMOVE HORIZONTAL SCROLL */
-body {
-  overflow-x: hidden;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
 }
