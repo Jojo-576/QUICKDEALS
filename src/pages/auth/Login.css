@@ -100,12 +100,24 @@
   border-radius: 10px;
   border: 1px solid #cbd5e1;
   margin-bottom: 1rem;
-  font-size: 0.95rem;
+
+  /* 👇 UPDATED */
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a; /* deep text */
   outline: none;
 }
 
+/* Placeholder softer */
+.login-right form input::placeholder {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Focus effect */
 .login-right form input:focus {
   border-color: #facc15;
+  box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.35);
 }
 
 /* LOGIN BUTTON */
@@ -143,6 +155,8 @@
   color: #475569;
   text-align: center;
 }
+
+
 
 /* ===================== */
 /* MOBILE RESPONSIVENESS */
