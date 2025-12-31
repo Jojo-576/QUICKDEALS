@@ -1,51 +1,52 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { useState } from "react";
 import "./Navbar.css";
 
 function Navbar() {
   const { user, logout } = useAuth();
-  const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="auth-space">
-      {/* HAMBURGER ICON (MOBILE) */}
-      <div className="menu-icon" onClick={() => setOpen(!open)}>
-        ☰
-      </div>
+    <header className="navbar">
+      <div className="nav-inner">
+        <Link to="/" className="logo">
+          QUICK DEALS GHANA
+        </Link>
 
-      {/* NAV LINKS */}
-      <div className={`auth-bar ${open ? "open" : ""}`}>
-        <Link to="/" onClick={() => setOpen(false)}>Home</Link>
+        {/* HAMBURGER */}
+        <div
+          className={`hamburger ${menuOpen ? "open" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-        {!user ? (
-          <>
-            <Link to="/login" className="auth-btn login" onClick={() => setOpen(false)}>
-              Login
-            </Link>
-            <Link to="/register" className="auth-btn register" onClick={() => setOpen(false)}>
-              Register
-            </Link>
-          </>
-        ) : (
-          <>
-            <Link to="/wallet" className="auth-btn wallet" onClick={() => setOpen(false)}>
-              Wallet (GH₵ {user.balance?.toFixed(2)})
-            </Link>
-            <span className="auth-user">Hello, {user.name}</span>
-            <button
-              onClick={() => {
-                logout();
-                setOpen(false);
-              }}
-              className="auth-btn logout"
-            >
-              Logout
-            </button>
-          </>
-        )}
+        {/* NAV LINKS */}
+        <nav className={`nav-links ${menuOpen ? "show" : ""}`}>
+          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+
+          {!user ? (
+            <>
+              <Link to="/login" onClick={() => setMenuOpen(false)}>Login</Link>
+              <Link to="/register" onClick={() => setMenuOpen(false)}>Register</Link>
+            </>
+          ) : (
+            <>
+              <Link to="/wallet" onClick={() => setMenuOpen(false)}>
+                Wallet (GH₵ {user.balance.toFixed(2)})
+              </Link>
+              <span className="auth-user">Hello, {user.name}</span>
+              <button onClick={logout} className="logout-btn">
+                Logout
+              </button>
+            </>
+          )}
+        </nav>
       </div>
-    </div>
+    </header>
   );
 }
 
