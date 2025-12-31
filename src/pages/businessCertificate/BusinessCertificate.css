@@ -65,17 +65,26 @@
 }
 
 /* BUTTON */
-.business-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 1rem 1.8rem;
+.proceed-btn {
+  position: static; /* 👈 KEY FIX */
+
+  width: 100%;
+  margin: 2.5rem 0 1rem;
+  padding: 1rem;
+
   border-radius: 30px;
   border: none;
-  background: #94a3b8;
-  color: #fff;
+  background: #777;
+  color: white;
   font-size: 1rem;
+  font-weight: 600;
 }
+
+.proceed-btn.active {
+  background: #00c853;
+  cursor: pointer;
+}
+
 
 .business-btn.active {
   background: #2563eb;
@@ -93,3 +102,4 @@
     font-size: 1.8rem;
   }
 }
+
