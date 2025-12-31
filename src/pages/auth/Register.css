@@ -156,6 +156,30 @@
   animation: floatDot 3s ease-in-out infinite;
 }
 
+.register-right input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+
+  /* 👇 UPDATED */
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.register-right input::placeholder {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.register-right input:focus {
+  border-color: #facc15;
+  box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.35);
+}
+
+
 @keyframes floatDot {
   0% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
