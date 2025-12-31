@@ -1,25 +1,44 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import "./Header.css";
 
-function Header() {
+export default function Header() {
+  const { user, logout } = useAuth();
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className="top-header">
+    <header className="header">
       <div className="header-inner">
-        {/* LEFT: SITE NAME */}
-        <div className="site-name">
-          QUICK DEALS GHANA
+        <Link to="/" className="logo">QUICK DEALS GHANA</Link>
+
+        {/* HAMBURGER */}
+        <div className="hamburger" onClick={() => setOpen(!open)}>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
 
-        {/* RIGHT: NAV LINKS */}
-        <nav className="top-nav">
-          <Link to="/">Home</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/register">Register</Link>
-          <Link to="/Wallet">Wallet</Link>
+        {/* LINKS */}
+        <nav className={`nav ${open ? "open" : ""}`}>
+          <Link to="/" onClick={() => setOpen(false)}>Home</Link>
+
+          {!user ? (
+            <>
+              <Link to="/login" onClick={() => setOpen(false)}>Login</Link>
+              <Link to="/register" onClick={() => setOpen(false)}>Register</Link>
+            </>
+          ) : (
+            <>
+              <Link to="/wallet" onClick={() => setOpen(false)}>
+                Wallet (GH₵ {user.balance.toFixed(2)})
+              </Link>
+              <span className="hello">Hello {user.name}</span>
+              <button onClick={logout}>Logout</button>
+            </>
+          )}
         </nav>
       </div>
     </header>
   );
 }
-
-export default Header;
